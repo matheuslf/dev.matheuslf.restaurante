@@ -1,0 +1,26 @@
+@baseUrl = http://localhost:8080
+
+### Cadastrar Produto
+POST {{baseUrl}}/produtos
+Content-Type: application/json
+
+{
+  "categoriaId": 2,
+  "nome": "Parmegiana de Frango",
+  "descricao": "Filé de frango empanado com molho de tomate e queijo",
+  "preco": 49.90,
+  "disponivel": true,
+  "tempoPreparoMinutos": 35
+}
+
+### Listar produtos
+GET {{baseUrl}}/produtos?page=0&size=10&sort=nome,asc
+
+### Buscar produto por ID
+GET {{baseUrl}}/produtos/3
+
+### Excluir produto
+DELETE {{baseUrl}}/produtos/1
+
+
+###
