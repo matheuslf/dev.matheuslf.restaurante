@@ -1,0 +1,18 @@
+@baseUrl = http://localhost:8080
+
+### Fechar conta do pedido
+POST {{baseUrl}}/pedidos/2/fechamento
+Content-Type: application/json
+
+{
+  "taxaServico": 15.00,
+  "desconto": 10.00
+}
+
+
+### Buscar fechamento do pedido
+GET {{baseUrl}}/pedidos/3/fechamento
+
+
+### Pagar pedido
+POST {{baseUrl}}/pedidos/3/pagar?formaPagamento=PIX

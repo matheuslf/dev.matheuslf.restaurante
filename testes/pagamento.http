@@ -1,0 +1,10 @@
+@baseUrl = http://localhost:9090
+
+### Processar pagamento
+POST {{baseUrl}}/pagamentos/processar
+Content-Type: application/json
+
+{
+  "valor": 120.50,
+  "formaPagamento": "PIX"
+}

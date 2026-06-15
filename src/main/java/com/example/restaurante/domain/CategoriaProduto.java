@@ -1,0 +1,22 @@
+package com.example.restaurante.domain;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "categorias_produtos")
+public class CategoriaProduto {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nome;
+    private Boolean ativa = true;
+
+    public Long getId() { return id; }
+    public String getNome() { return nome; }
+    public Boolean getAtiva() { return ativa; }
+
+    public void setNome(String nome) { this.nome = nome; }
+    public void setAtiva(Boolean ativa) { this.ativa = ativa; }
+}
