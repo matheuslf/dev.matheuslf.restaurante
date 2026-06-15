@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:8080
+
+### Cadastrar produto
+POST {{baseUrl}}/produtos
+Content-Type: application/json
+
+{
+  "categoriaId": 2,
+  "nome": "Parmegiana de Carne",
+  "descricao": "Filé de carne empanado com molho de tomate e queijo",
+  "preco": 49.90,
+  "disponivel": true,
+  "tempoPreparoMinutos": 1
+}
+
+### Listar produtos
+GET {{baseUrl}}/produtos?page=0&size=10&sort=id,asc
+
+### Buscar produto por ID
+GET {{baseUrl}}/produtos/1
+
+### Atualizar produto
+PUT {{baseUrl}}/produtos/1
+Content-Type: application/json
+
+{
+  "categoriaId": 2,
+  "nome": "Parmegiana de Frango Atualizada",
+  "descricao": "Filé de frango empanado com molho especial e queijo",
+  "preco": 54.90,
+  "disponivel": true,
+  "tempoPreparoMinutos": 40
+}
+
+### Excluir produto
+DELETE {{baseUrl}}/produtos/1

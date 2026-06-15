@@ -1,0 +1,13 @@
+@baseUrl = http://localhost:8080
+
+### Faturamento diário
+GET {{baseUrl}}/relatorios/faturamento-diario
+
+### Produtos mais vendidos
+GET {{baseUrl}}/relatorios/produtos-mais-vendidos
+
+### Ticket médio
+GET {{baseUrl}}/relatorios/ticket-medio
+
+### Pedidos por status
+GET {{baseUrl}}/relatorios/pedidos-por-status
